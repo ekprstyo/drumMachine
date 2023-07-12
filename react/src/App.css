@@ -1,0 +1,134 @@
+body {
+  background-color: #8d8d8d;
+  font-weight: 900;
+  text-align: center;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #b3b3b3;
+  width: 660px;
+  border: #ffa500 5px solid;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.drumpad {
+  padding: 20px;
+  width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pad {
+  background-color: #808080;
+  width: 100px;
+  height: 55px;
+  padding-top: 27px;
+  margin: 5px;
+  box-shadow: 3px 3px 5px black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logo-controls {
+  margin-left: -6px;
+  width: 250px;
+}
+
+.logo p {
+  margin-top: 3px;
+  margin-right: -15px;
+  text-align: right;
+  font-size: 24px;
+  font-style: italic;
+}
+
+.control-name {
+  margin-bottom: 1px;
+}
+
+.title {
+  background-color: #808080;
+  width: 200px;
+  padding: 1px 0;
+  margin: 15px auto 0;
+}
+
+/* styling input range FF - start */
+input[type="range"] {
+  width: 100%;
+  margin-top: 25px;
+}
+
+input[type="range"]::-moz-range-track {
+  box-shadow: 2px 2px 2px #222, 0 0 2px #2f2f2f;
+  height: 5px;
+  cursor: pointer;
+  background: #424242;
+  border: 1px solid #000;
+  border-radius: 0;
+}
+
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #111, 0 0 1px #1e1e1e;
+  border: none;
+  height: 25px;
+  width: 8px;
+  border-radius: 0;
+  background: #0000ff;
+  cursor: pointer;
+}
+/* styling input range FF - end */
+
+/* styling toggle - start */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 23px;
+  padding: 1px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #0000ff;
+  transition: 0.4s;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translate(24px);
+}
+/* styling toggle - end */
